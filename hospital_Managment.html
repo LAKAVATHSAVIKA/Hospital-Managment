@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Managment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color:rgb(109, 109, 209);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    padding: 2em;
+}
+
+#doctors .doctor {
+    margin-bottom: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, button {
+    margin-bottom: 0.5em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Welcome to People Service Hospital</h1>
+        <p>Providing quality healthcare since 1990.</p>
+        <p>Surgical Services
+            General Surgery: Procedures for a variety of conditions including appendectomies, hernia repairs, and gallbladder removals.
+            Specialized Surgeries: Orthopedic, cardiovascular, neurological, and laparoscopic surgeries.
+            Diagnostic Services
+            Imaging: X-rays, MRI, CT scans, and ultrasound.
+            Laboratory Tests: Blood tests, urinalysis, and other pathology services.
+            Specialized Diagnostics: Endoscopy, colonoscopy, and other advanced diagnostic procedures.
+            Emergency Care
+            24/7 Emergency Room: Immediate care for acute illnesses and injuries.
+            Trauma Care: Specialized treatment for severe injuries.
+            Critical Care: Intensive care units (ICU) for patients requiring close monitoring and advanced medical care.</p>
+    </header>
+
+    <section id="doctors">
+        <h2>Our Doctors</h2>
+        <div class="doctor">
+            <h3>Dr. John Doe</h3>
+            <p>Specialist in Cardiology</p>
+        </div>
+        <div class="doctor">
+            <h3>Dr. Jane Smith</h3>
+            <p>Specialist in Neurology</p>
+        </div>
+    </section>
+
+    <section id="appointment">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+<script>
+   document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Appointment booked successfully!');
+});
+</script>
